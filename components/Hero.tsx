@@ -1,32 +1,22 @@
 import React from 'react';
 import { ArrowDown } from 'lucide-react';
 import { COMPANY_NAME, HERO_HEADLINE, HERO_SUBTEXT } from '../constants';
-import { EditableText } from './admin/EditableText';
 
 export const Hero: React.FC = () => {
   return (
     <section className="min-h-[70vh] flex flex-col justify-center px-6 md:px-12 lg:px-24 pt-24 pb-12 bg-white">
       <div className="max-w-4xl">
         <span className="block text-xs font-semibold tracking-[0.2em] text-neutral-400 uppercase mb-8">
-          <EditableText id="company-name" defaultText={COMPANY_NAME} />
+          {COMPANY_NAME}
         </span>
 
-        <EditableText
-          id="hero-headline"
-          defaultText={HERO_HEADLINE}
-          as="h1"
-          className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight text-neutral-900 mb-8 leading-[0.95]"
-          multiline
-        />
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight text-neutral-900 mb-8 leading-[0.95]">
+          {HERO_HEADLINE}
+        </h1>
 
-        <div className="text-lg md:text-2xl text-neutral-500 font-light max-w-2xl leading-relaxed">
-          <EditableText
-            id="hero-subtext"
-            defaultText={HERO_SUBTEXT}
-            as="p"
-            multiline
-          />
-        </div>
+        <p className="text-lg md:text-2xl text-neutral-500 font-light max-w-2xl leading-relaxed">
+          {HERO_SUBTEXT}
+        </p>
       </div>
 
       <div className="mt-24">
